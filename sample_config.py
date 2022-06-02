@@ -21,6 +21,10 @@ class Config(object):
     DB_URI = os.environ.get("DATABASE_URL", None)
     # Get this value by running python3 stringsetup.py or https://repl.it/@SimpleBoy786/generatestringsession
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
+    STRING_SESSION2 = os.environ.get("STRING_SESSION2", None)
+    STRING_SESSION3 = os.environ.get("STRING_SESSION3", None)
+    STRING_SESSION4 = os.environ.get("STRING_SESSION4", None)
+    STRING_SESSION5 = os.environ.get("STRING_SESSION5", None)
     # Telegram BOT Token and bot username from @BotFather
     TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN") or os.environ.get(
         "TG_BOT_TOKEN_BF_HER", None
