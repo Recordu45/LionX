@@ -90,6 +90,7 @@ if Config.STRING_SESSION5:
 else:
     bot5 = None
 
+lionub = [bot, bot2, bot3, bot4, bot5]
 
 lionub.tgbot = tgbot = LionXClient(
     session="LionTgXBot",
