@@ -191,7 +191,7 @@ class LionXClient(TelegramClient):
                             Config.PRIVATE_GROUP_BOT_API_ID, text, link_preview=False
                         )
 
-            from .session import lionub
+            from .session import lionub, lionub2, lionub3, lionub4, lionub5
 
             if not func.__doc__ is None:
                 CMD_INFO[command[0]].append((func.__doc__).strip())
@@ -215,22 +215,96 @@ class LionXClient(TelegramClient):
                 if allow_sudo and gvarstatus("sudoenable") is not None:
                     if command is None or command[0] in sudo_enabledcmds:
                         if edited:
-                            lionub.add_event_handler(
-                                wrapper,
-                                MessageEdited(
-                                    pattern=REGEX_.regex2,
-                                    from_users=_sudousers_list(),
-                                    **kwargs,
-                                ),
-                            )
-                        lionub.add_event_handler(
-                            wrapper,
-                            NewMessage(
-                                pattern=REGEX_.regex2,
-                                from_users=_sudousers_list(),
-                                **kwargs,
-                            ),
-                        )
+                            if lionub:
+                               lionub.add_event_handler(
+                                   wrapper,
+                                   MessageEdited(
+                                       pattern=REGEX_.regex2,
+                                       from_users=_sudousers_list(),
+                                       **kwargs,
+                                   ),
+                               )
+                            if lionub2:
+                               lionub2.add_event_handler(
+                                   wrapper,
+                                   MessageEdited(
+                                       pattern=REGEX_.regex2,
+                                       from_users=_sudousers_list(),
+                                       **kwargs,
+                                   ),
+                               )
+                            if lionub3:
+                               lionub3.add_event_handler(
+                                   wrapper,
+                                   MessageEdited(
+                                       pattern=REGEX_.regex2,
+                                       from_users=_sudousers_list(),
+                                       **kwargs,
+                                   ),
+                               )
+                            if lionub4:
+                               lionub4.add_event_handler(
+                                   wrapper,
+                                   MessageEdited(
+                                       pattern=REGEX_.regex2,
+                                       from_users=_sudousers_list(),
+                                       **kwargs,
+                                   ),
+                               )
+                            if lionub5:
+                               lionub5.add_event_handler(
+                                   wrapper,
+                                   MessageEdited(
+                                       pattern=REGEX_.regex2,
+                                       from_users=_sudousers_list(),
+                                       **kwargs,
+                                   ),
+                               )
+                        if lionub:
+                           lionub.add_event_handler(
+                               wrapper,
+                               NewMessage(
+                                   pattern=REGEX_.regex2,
+                                   from_users=_sudousers_list(),
+                                   **kwargs,
+                               ),
+                           )
+                        if lionub2:
+                           lionub2.add_event_handler(
+                               wrapper,
+                               NewMessage(
+                                   pattern=REGEX_.regex2,
+                                   from_users=_sudousers_list(),
+                                   **kwargs,
+                               ),
+                           )
+                        if lionub3:
+                           lionub3.add_event_handler(
+                               wrapper,
+                               NewMessage(
+                                   pattern=REGEX_.regex2,
+                                   from_users=_sudousers_list(),
+                                   **kwargs,
+                               ),
+                           )
+                        if lionub4:
+                           lionub4.add_event_handler(
+                               wrapper,
+                               NewMessage(
+                                   pattern=REGEX_.regex2,
+                                   from_users=_sudousers_list(),
+                                   **kwargs,
+                               ),
+                           )
+                        if lionub5:
+                           lionub5.add_event_handler(
+                               wrapper,
+                               NewMessage(
+                                   pattern=REGEX_.regex2,
+                                   from_users=_sudousers_list(),
+                                   **kwargs,
+                               ),
+                           )
             else:
                 if file_test in LOADED_CMDS and func in LOADED_CMDS[file_test]:
                     return None
@@ -239,8 +313,26 @@ class LionXClient(TelegramClient):
                 except BaseException:
                     LOADED_CMDS.update({file_test: [func]})
                 if edited:
-                    lionub.add_event_handler(func, events.MessageEdited(**kwargs))
-                lionub.add_event_handler(func, events.NewMessage(**kwargs))
+                    if lionub:
+                       lionub.add_event_handler(func, events.MessageEdited(**kwargs))
+                    if lionub2:
+                       lionub2.add_event_handler(func, events.MessageEdited(**kwargs))
+                    if lionub3:
+                       lionub3.add_event_handler(func, events.MessageEdited(**kwargs))
+                    if lionub4:
+                       lionub4.add_event_handler(func, events.MessageEdited(**kwargs))
+                    if lionub5:
+                       lionub5.add_event_handler(func, events.MessageEdited(**kwargs))
+                if lionub:
+                   lionub.add_event_handler(func, events.NewMessage(**kwargs))
+                if lionub2:
+                   lionub2.add_event_handler(func, events.NewMessage(**kwargs))
+                if lionub3:
+                   lionub3.add_event_handler(func, events.NewMessage(**kwargs))
+                if lionub4:
+                   lionub4.add_event_handler(func, events.NewMessage(**kwargs))
+                if lionub5:
+                   lionub5.add_event_handler(func, events.NewMessage(**kwargs))
             return wrapper
 
         return decorator
