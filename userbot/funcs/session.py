@@ -94,7 +94,7 @@ lionub = bot
 lionub2 = bot2
 lionub3 = bot3
 lionub4 = bot4
-lionub = bot5
+lionub5 = bot5
 
 lionub.tgbot = tgbot = LionXClient(
     session="LionTgXBot",
