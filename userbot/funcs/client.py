@@ -204,14 +204,56 @@ class LionXClient(TelegramClient):
                     except BaseException:
                         LOADED_CMDS.update({command[0]: [wrapper]})
                 if edited:
-                    lionub.add_event_handler(
-                        wrapper,
-                        MessageEdited(pattern=REGEX_.regex1, outgoing=True, **kwargs),
-                    )
-                lionub.add_event_handler(
-                    wrapper,
-                    NewMessage(pattern=REGEX_.regex1, outgoing=True, **kwargs),
-                )
+                    if lionub:
+                       lionub.add_event_handler(
+                           wrapper,
+                           MessageEdited(pattern=REGEX_.regex1, outgoing=True, **kwargs),
+                       )
+                    if lionub2:
+                       lionub2.add_event_handler(
+                           wrapper,
+                           MessageEdited(pattern=REGEX_.regex1, outgoing=True, **kwargs),
+                       )
+                    if lionub3:
+                       lionub3.add_event_handler(
+                           wrapper,
+                           MessageEdited(pattern=REGEX_.regex1, outgoing=True, **kwargs),
+                       )
+                    if lionub4:
+                       lionub4.add_event_handler(
+                           wrapper,
+                           MessageEdited(pattern=REGEX_.regex1, outgoing=True, **kwargs),
+                       )
+                    if lionub5:
+                       lionub5.add_event_handler(
+                           wrapper,
+                           MessageEdited(pattern=REGEX_.regex1, outgoing=True, **kwargs),
+                       )
+                if lionub:
+                   lionub.add_event_handler(
+                       wrapper,
+                       NewMessage(pattern=REGEX_.regex1, outgoing=True, **kwargs),
+                   )
+                if lionub2:
+                   lionub2.add_event_handler(
+                       wrapper,
+                       NewMessage(pattern=REGEX_.regex1, outgoing=True, **kwargs),
+                   )
+                if lionub3:
+                   lionub3.add_event_handler(
+                       wrapper,
+                       NewMessage(pattern=REGEX_.regex1, outgoing=True, **kwargs),
+                   )
+                if lionub4:
+                   lionub4.add_event_handler(
+                       wrapper,
+                       NewMessage(pattern=REGEX_.regex1, outgoing=True, **kwargs),
+                   )
+                if lionub5:
+                   lionub5.add_event_handler(
+                       wrapper,
+                       NewMessage(pattern=REGEX_.regex1, outgoing=True, **kwargs),
+                   )
                 if allow_sudo and gvarstatus("sudoenable") is not None:
                     if command is None or command[0] in sudo_enabledcmds:
                         if edited:
