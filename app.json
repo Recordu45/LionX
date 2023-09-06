@@ -7,7 +7,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/MdNoor786/LionX/",
+  "repository": "https://github.com/Recordu45/LionX/",
   "website": "#TODO",
   "success_url": "https://t.me/LionXsupport",
   "env": {
@@ -73,8 +73,6 @@
     "url":"https://github.com/heroku/heroku-buildpack-google-chrome"
   },{
     "url":"https://github.com/heroku/heroku-buildpack-chromedriver"
-  },{
-    "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
   },{
     "url": "https://github.com/heroku/heroku-buildpack-apt.git"
   },{
